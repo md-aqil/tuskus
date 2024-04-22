@@ -61,12 +61,12 @@ var swiper = new Swiper('.swiper-loop', {
   },
   freeMode: true,
   speed: 9000,
-  slidesPerView: "auto",
+  slidesPerView: 5,
   spaceBetween: 0,
 
   breakpoints: {
     1400: {
-        slidesPerView: 2,
+        slidesPerView: 6,
         spaceBetween: 0,
         centeredSlides: true,
      },

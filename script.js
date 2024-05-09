@@ -6,10 +6,10 @@ var app = {
   chars: [
     '.',
 
-     'Tuskush',
+     'Tuscus',
      '.',
 
-     'TUSKUSH',
+     'Tuscus',
      '.',
      '.'
    

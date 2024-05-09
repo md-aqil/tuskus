@@ -1,4 +1,5 @@
 'use strict';
+feather.replace();
 
 var app = {
 
@@ -88,3 +89,24 @@ $('.faq-heading').click(function () {
   
   $(this).parent('li').toggleClass('the-active').find('.faq-text').slideToggle();
 });
+
+
+
+function copyToClipboard() {
+  // Create a temporary input element
+  var tempInput = document.createElement("input");
+  // Assign the Ethereum address to its value
+  tempInput.value = "0x71abB2c7943bAD7769cb5f5F726f0eeA92E62082";
+  // Append it to the DOM
+  document.body.appendChild(tempInput);
+  // Select the text in the input
+  tempInput.select();
+  // Copy the selected text
+  document.execCommand("copy");
+  // Remove the temporary input
+  document.body.removeChild(tempInput);
+  // Provide some visual feedback (optional)
+  alert("Address copied to clipboard: 0x71abB2c7943bAD7769cb5f5F726f0eeA92E62082");
+}
+
+

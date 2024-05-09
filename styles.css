@@ -1,25 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wintermouse:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
 :root {
-  --theme-color: #84ff3d;
+  --theme-color: #4FCC0D;
+  --theme-yellow: #FFF500;
+  
+
 }
+
+@font-face {
+
+  font-family: 'Wintermouse';
+  src: url('./Mrs. Wintermouse.ttf') format('ttf'), /* Modern Browsers */
+       url('./Mrs. Wintermouse.ttf') format('woff'); /* Older Browsers */
+  /* Optionally, you can specify font-weight and font-style */
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+.footer-list .icon-list li a img {
+  /* border-radius: 50%; */
+  /* padding: 8px; */
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-list {
+  display:flex;
+}
+.footer-list {
+  align-items:center;
+  justify-content:center;
+}
+.icon-list {
+  display: flex;
+  margin: 0;
+  PADDING: 0;
+  GAP: 13PX;
+  list-style:none;
+}
+
+
 .quicksand {
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
 }
-.montserrat {
-  font-family: "Montserrat", sans-serif;
+
+.Wintermouse {
+  font-family: "Wintermouse", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 300;
   font-style: normal;
-}
+} 
 
 
 body, html {
     margin: 0;
     padding: 0;
-  font-family: "Quicksand", sans-serif;
   background: #000;
 
   }
@@ -44,7 +83,7 @@ body, html {
     z-index: 100;
     top: 20px;
     right: 20px;
-    opacity: 0;
+    /* opacity: 0; */
   }
   .overlay {
     position: absolute;
@@ -53,7 +92,7 @@ body, html {
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(180deg, rgba(0, 0, 0, .7), rgba(0, 0, 0,  1));
+    background: linear-gradient(180deg, rgba(0, 0, 0, .5), rgba(0, 0, 0,  1));
 
     z-index: 1;
   
@@ -86,7 +125,7 @@ body, html {
   }
   
   .animation-container span {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Wintermouse", sans-serif;
 
     position: absolute;
     color: whitesmoke;
@@ -128,37 +167,40 @@ body, html {
     width: 50%;
     margin-left: 100px;
     text-align: left;
+    color: var(--theme-color);
 
-     background: linear-gradient(
-      to right, 
-      hsl(98 100% 62%), 
-      hsl(204 100% 59%)
-    ); 
-
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <600>;
-    font-style: normal;
-    font-size: 21px;
-    letter-spacing: 2px;
-    /* margin-top:-100px; */
 
   }
   
   .gtext h1 {
     font-size: 70px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Wintermouse", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
     margin-bottom:15px;
-  
+    letter-spacing: 4px;
     line-height: 1.1;
+    font-weight:300;
   }
+  .gtext p {
+    font-family: 'Quicksand';
+
+  }
+
+  .swiper-loop .swiper-slide {
+    font-size: 36px;
+    position: relative;
+    font-weight: 300;
+    white-space: nowrap;
+    justify-content: center;
+    text-align: center;
+    color: var(--theme-color);
+  font-family: "Wintermouse", sans-serif;
+
+
+}
+
 
 header {
   left:90px;
@@ -174,7 +216,7 @@ header {
 header .logo {
   text-decoration: none;
   font-size: 24px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Wintermouse", sans-serif;
   color: #fff;
   font-style: italic;
   font-weight: 700;
@@ -246,7 +288,7 @@ nav a::after {
 }
 
 nav a:hover {
-  color: var(--theme-color);
+  color: var(--theme-yellow);
 
 }
 
@@ -283,7 +325,18 @@ nav a:nth-child(3):hover ~ #indicator {
   margin: auto;
   align-items: center;
 }
+.container {
+  width: 85%;
+  margin: auto;
 
+}
+.subheading {
+  color: var(--theme-color);
+  text-align:center;
+  font-size: 24px;
+  font-family: "Quicksand";
+  margin-bottom: 40px;
+}
 .stats-content ul {
   list-style: none;
   margin: 0;
@@ -292,7 +345,7 @@ nav a:nth-child(3):hover ~ #indicator {
 .stats-content ul li {
   color: #bbbbbb;
 
-  font-size: 21px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -303,26 +356,30 @@ nav a:nth-child(3):hover ~ #indicator {
   align-items: flex-start;
   flex-direction: column;
   letter-spacing: 0;
+  font-family: "Quicksand", sans-serif;
+
 }
 
 .stats-content ul li span {
-  background: linear-gradient(
-    to right, 
-    hsl(98 100% 62%), 
-    hsl(204 100% 59%)
-  ); 
-
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-
-  font-size: 24px;
+  color: var(--theme-color);
+  /* -webkit-text-fill-color: transparent; */
+  font-size: 30px;
   font-style: normal;
   font-weight: 600;
-  line-height: normal;
   display: block;
   line-height: 2;
+  font-family: "Wintermouse", sans-serif;
+  letter-spacing:2px;
+}
+
+.contract-address{
+  background: var(--theme-yellow);
+    display: -webkit-inline-box;
+    padding: 16px;
+    font-family: 'Quicksand';
+    margin: auto;
+    border-radius: 12px;
+    
 }
 .spacer {
   padding-top:80px;
@@ -358,16 +415,7 @@ width: 60px;
   text-align:center;
 }
 
-.swiper-loop .swiper-slide {
-  font-size: 24px;
-  position:relative;
-  font-weight: 500;
-  white-space: nowrap;
-  justify-content: center;
-  text-align:center;
 
-
-}
 .swiper-loop .swiper-slide:before {
   content: "";
   background: url(../img/star.svg) center no-repeat;
@@ -380,15 +428,15 @@ width: 60px;
   bottom: 0;
 }
 
-
 .heading {
-  color:#bbb;
-  font-size: 40px;
-  text-align:center;
-  font-family: "Montserrat", sans-serif;
-  margin-bottom:50px;
+  color: #4fcc0d;
+  font-size: 60px;
+  text-align: center;
+  font-family: "Wintermouse", sans-serif;
+  margin-bottom: 50px;
+  letter-spacing: 3px;
+  font-weight:300;
 }
-
 
 
 
@@ -407,6 +455,7 @@ width: 60px;
   box-shadow: inset 43.6px -43.6px 43.6px rgba(2, 2, 2, 0.1), inset -43.6px 43.6px 43.6px rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(43.6px);
   border-radius: 8px;
+  font-family: Quicksand;
 }
 
 
@@ -503,8 +552,28 @@ flex-basis: 50%;
 .gtext h1 {
   font-size: 49px;
 }
+
+.by-list {
+  margin: 0;
+  padding:0;
+}
+
+.list {
+  background: #FFF500;
+  display:flex;
+
 }
 
 
-
- 
+.list img {
+  width:200px;
+}
+.btn-theme {
+  background: var(
+--theme-yellow;
+  );
+  border-radius: 50px;
+  border-radius: 40px;
+  padding: 12px 20px;
+  border: none;
+}
